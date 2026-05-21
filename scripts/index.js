@@ -64,7 +64,7 @@ function countdown() {
     (time--)
       if (time < 0) {
         finalScore.textContent = (scoreEl.textContent)
-        endgameEl.style.display = "inline";
+        gameOver()
 
         clearInterval(timer)
       } 
@@ -83,6 +83,10 @@ function displayTime() {
 //add 5s to timer
 function addTime() {
   time += 5
+}
+
+function gameOver() {
+  endgameEl.style.display = "inline"
 }
  
 //input event listener
